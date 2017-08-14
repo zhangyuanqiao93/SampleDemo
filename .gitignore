@@ -1,0 +1,16 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/dataSources.local.xml
+.idea/dataSources/
+.idea/inspectionProfiles/
+.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml
+.idea/libraries/Maven__org_springframework_spring_aop_4_1_5_RELEASE.xml
+.idea/libraries/Maven__org_springframework_spring_beans_4_1_5_RELEASE.xml
+.idea/libraries/Maven__org_springframework_spring_context_4_1_5_RELEASE.xml
+.idea/libraries/Maven__org_springframework_spring_core_4_1_5_RELEASE.xml
+.idea/libraries/Maven__org_springframework_spring_expression_4_1_5_RELEASE.xml
+.idea/libraries/Maven__org_springframework_spring_web_4_1_5_RELEASE.xml
+.idea/workspace.xml
+src/main/resources/
+src/test/
+target/

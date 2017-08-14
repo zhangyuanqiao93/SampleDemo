@@ -8,6 +8,7 @@
     <artifactId>SampleDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
+        <!--编译插件-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -22,6 +23,8 @@
 
     <properties>
         <jdk.version>1.8</jdk.version>
+
+       <spring-framework.version>4.1.5.RELEASE</spring-framework.version>
     </properties>
 
 
@@ -36,6 +39,13 @@
         <artifactId>mybatis-spring-boot-starter</artifactId>
         <version>1.3.0</version>
     </dependency>
+    <!--pom.xml测试-->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring-framework.version}</version>
+        <!--<version>4.3.9.RELEASE</version>-->
+    </dependency>
 </dependencies>
-    
+
 </project>
