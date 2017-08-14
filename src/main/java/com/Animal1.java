@@ -5,17 +5,17 @@ package com;
  * Function:
  * Description:
  */
-public class Animal {
+public class Animal1 {
 
     private String name;
     private int age;
     //初始化属性值
-    public Animal(String myName,int age){
+    public Animal1(String myName, int age){
         this.age =  age;
         this.name = myName;
     }
 
-    public Animal(){
+    public Animal1(){
         this.eat();
         this.sleep();
     }

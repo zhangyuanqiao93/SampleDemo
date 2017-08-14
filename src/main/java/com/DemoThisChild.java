@@ -15,9 +15,11 @@ public class DemoThisChild extends DemoThis {
     public DemoThisChild() {
     }
 
+
     @Override //重写父类的方法，只能改变方法体，即实现逻辑
     public void print() {
         super.print();
         System.out.println("嘿嘿嘿。。。");
+
     }
 }
