@@ -7,6 +7,13 @@ import java.sql.*;
  * Function: MySQLDemo
  * Description:
  */
+
+/**
+ * 总结连接MySQL驱动：
+ * 1.注册MySQL驱动
+ * 2.传递DB，USERNAME,PASSWORD
+ * 3.
+ */
 public class MySQLDemo {
 
     // JDBC 驱动名及数据库 URL
@@ -24,20 +31,24 @@ public class MySQLDemo {
 
         // 注册 JDBC 驱动
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName(JDBC_DRIVER);
 
             System.out.println("连接数据库...");
+            //使用DriverManager获取数据库连接
             conn = DriverManager.getConnection(DB_URL,USER,PASS);
             System.out.println("实例化Statement...");
+
+            //使用Connection来创建一个Statment对象
             statement = conn.createStatement();
 
             String sql = "";
 
             sql = "select id, name ,url from websites";
 
+            //
             ResultSet resultSet = statement.executeQuery(sql);
 
-            //展开结果集数据库
+            //展开结果集数据库 or //执行查询语句并且保存结果
             while (resultSet.next()){
 
                 // 通过字段检索
@@ -64,11 +75,16 @@ public class MySQLDemo {
         }finally {
             // 关闭资源
             try{
-                if(statement!=null) statement.close();
+                if(statement!=null){
+                    statement.close();
+                }
             }catch(SQLException se2){
+                // do nothing
             }// 什么都不做
             try{
-                if(conn!=null) conn.close();
+                if(conn!=null) {
+                    conn.close();
+                }
             }catch(SQLException se){
                 se.printStackTrace();
             }
